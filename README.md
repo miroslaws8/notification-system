@@ -26,3 +26,8 @@ Channel handler, sending messages through the channel using the required templat
 4. Run `php artisan redis:messages-subscribe`
 5. Run `php artisan app:test-command`
 
+
+### Testing
+
+1. Create `database.sqlite`
+2. Run `./vendor/bin/phpunit`
