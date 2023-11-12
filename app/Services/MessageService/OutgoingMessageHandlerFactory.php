@@ -4,7 +4,7 @@ namespace App\Services\MessageService;
 
 use App\Enum\NotificationChannelEnum;
 use App\Services\MessageService\Contracts\MessageHandlerInterface;
-use App\Services\MessageService\Strategies\MailOutgoingMessageHandler;
+use App\Services\MessageService\Strategies\MailAbstractOutgoingMessageHandler;
 use Illuminate\Contracts\Container\Container;
 
 readonly class OutgoingMessageHandlerFactory
@@ -15,7 +15,7 @@ readonly class OutgoingMessageHandlerFactory
     public function make(NotificationChannelEnum $channelEnum): MessageHandlerInterface
     {
         return match ($channelEnum) {
-            NotificationChannelEnum::MAIL => $this->container->make(MailOutgoingMessageHandler::class),
+            NotificationChannelEnum::MAIL => $this->container->make(MailAbstractOutgoingMessageHandler::class),
         };
     }
 }

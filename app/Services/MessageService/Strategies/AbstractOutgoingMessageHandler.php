@@ -7,7 +7,7 @@ use App\Models\User;
 use App\Services\MessageService\DTO\MessageData;
 use Illuminate\Support\Facades\Log;
 
-abstract class OutgoingMessageHandler
+abstract class AbstractOutgoingMessageHandler
 {
     abstract protected function getNotifiable(MessageData $messageData): User;
     abstract protected function getQueueName(): string;

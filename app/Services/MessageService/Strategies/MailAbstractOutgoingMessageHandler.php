@@ -6,7 +6,7 @@ use App\Models\User;
 use App\Services\MessageService\Contracts\MessageHandlerInterface;
 use App\Services\MessageService\DTO\MessageData;
 
-class MailOutgoingMessageHandler extends OutgoingMessageHandler implements MessageHandlerInterface
+class MailAbstractOutgoingMessageHandler extends AbstractOutgoingMessageHandler implements MessageHandlerInterface
 {
     protected function getNotifiable(MessageData $messageData): User
     {
