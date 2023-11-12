@@ -14,6 +14,10 @@ This command starts a subscription to redis messages, which in turn are sent ove
 
 The command adds a new message to redis to test sending the notification.
 
+### Message Service
+
+Channel handler, sending messages through the channel using the required template.
+
 ### Install
 
 1. Set up the env variable (db, redis, test email)
